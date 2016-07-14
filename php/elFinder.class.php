@@ -758,15 +758,14 @@ class elFinder {
 	 * Return file real path
 	 *
 	 * @param  string  $hash  file hash
-	 * @param  boolean  $forcePath  Return path if file not exist
 	 * @return string
 	 * @author Dmitry (dio) Levashov
 	 **/
-	public function realpath($hash, $forcePath=false)	{
+	public function realpath($hash)	{
 		if (($volume = $this->volume($hash)) == false) {
 			return false;
 		}
-		return $volume->realpath($hash, $forcePath);
+		return $volume->realpath($hash);
 	}
 	
 	/**
